@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Activity, ShieldAlert, Navigation, ArrowUpRight, ArrowDownRight, Radio } from 'lucide-react';
 
-const BACKEND_URL = 'http://localhost:5000';
+const BACKEND_URL =
+  import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
 
 export default function CityPulseTerminal() {
   const [pulseData, setPulseData] = useState(null);
