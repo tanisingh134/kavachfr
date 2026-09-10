@@ -8,7 +8,8 @@ import { playHapticTone } from '../services/audioSynthesis';
 import { exportBackupToFile, restoreBackupFromFile, saveOfflineSnapshot, getBackupStorageStats } from '../services/offlineBackupService';
 import { translations } from '../services/translations';
 
-const BACKEND_URL = 'http://localhost:5000';
+const BACKEND_URL =
+  import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
 
 export default function DatabaseManagerModal({ isOpen, onClose, userLocation, language = 'en' }) {
   const t = translations[language] || translations.en;
