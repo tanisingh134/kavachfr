@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Send, X, Bot, User, ShieldAlert, CornerDownRight } from 'lucide-react';
 
-const BACKEND_URL = 'http://localhost:5000';
+const BACKEND_URL =
+  import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
 
 export default function HotspotChat({ hotspot, onClose }) {
   const [messages, setMessages] = useState([]);
